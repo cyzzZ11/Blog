@@ -20,11 +20,11 @@ module.exports = {
 
   themeConfig: { // 主题配置
     nav: [
-      { text: 'timeline', link: '/archives/' },
-      { text: 'about', link: '/about' },
-      { text: 'friends', link: '/friends' },
-      { text: 'categories', link: '/categories/' },
-      { text: 'tags', link: '/tags/' },
+      { text: 'Timeline', link: '/archives/' },
+      { text: 'About', link: '/about' },
+      // { text: 'friends', link: '/friends' },
+      { text: 'Categories', link: '/categories/' },
+      { text: 'Tags', link: '/tags/' },
     ]
     ,
     categoryText: '随笔',
