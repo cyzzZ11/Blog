@@ -1,6 +1,6 @@
 ---
 title: Rust
-date: 2022-01-05 21:31:04
+date: 2021-10-05 21:31:04
 permalink: /pages/5c545a/
 categories:
   - notes
