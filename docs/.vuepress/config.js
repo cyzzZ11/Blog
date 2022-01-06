@@ -68,7 +68,7 @@ module.exports = {
 
 
     blogger: { // 博主信息，显示在首页侧边栏
-      avatar: '/img/avatar2.jpg',
+      avatar: './img/avatar2.jpg',
       name: 'cyzzZ',
       slogan: 'zzZ!'
     },
