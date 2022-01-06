@@ -6,7 +6,7 @@ module.exports = {
 
   title: "cyzzZ's blog",
   description: 'ctfer', // 描述,以 <meta> 标签渲染到页面html中
-  // base: '/vuepress-theme-vdoing/', // '/<github仓库名>/'， 默认'/' 
+  base: '/Blog/', // '/<github仓库名>/'， 默认'/' 
   head: [ // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     ['link', { rel: 'icon', href: '/img/favicon.ico' }], //favicons，资源放在public文件夹
     ['meta', { name: 'keywords', content: 'ctfer' }],
