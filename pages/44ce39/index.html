@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>防抖与节流 | cyzzZ&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/Blog/img/favicon.ico">
+    <meta name="description" content="ctfer">
+    <meta name="keywords" content="ctfer">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/Blog/assets/css/0.styles.c8184275.css" as="style"><link rel="preload" href="/Blog/assets/js/app.8022dd47.js" as="script"><link rel="preload" href="/Blog/assets/js/2.6d4cd39a.js" as="script"><link rel="preload" href="/Blog/assets/js/21.3eb4d93e.js" as="script"><link rel="prefetch" href="/Blog/assets/js/10.38748153.js"><link rel="prefetch" href="/Blog/assets/js/11.82654428.js"><link rel="prefetch" href="/Blog/assets/js/12.243729b9.js"><link rel="prefetch" href="/Blog/assets/js/13.5b7fd469.js"><link rel="prefetch" href="/Blog/assets/js/14.8b9bc16b.js"><link rel="prefetch" href="/Blog/assets/js/15.9951036f.js"><link rel="prefetch" href="/Blog/assets/js/16.c20937e7.js"><link rel="prefetch" href="/Blog/assets/js/17.381a1efd.js"><link rel="prefetch" href="/Blog/assets/js/18.e6e1a2c5.js"><link rel="prefetch" href="/Blog/assets/js/19.672f3a69.js"><link rel="prefetch" href="/Blog/assets/js/20.15efab68.js"><link rel="prefetch" href="/Blog/assets/js/22.f89049d8.js"><link rel="prefetch" href="/Blog/assets/js/23.c417783b.js"><link rel="prefetch" href="/Blog/assets/js/24.a4f29f75.js"><link rel="prefetch" href="/Blog/assets/js/25.0e961cd0.js"><link rel="prefetch" href="/Blog/assets/js/26.7ab72894.js"><link rel="prefetch" href="/Blog/assets/js/27.ef21f779.js"><link rel="prefetch" href="/Blog/assets/js/3.12319727.js"><link rel="prefetch" href="/Blog/assets/js/4.95873415.js"><link rel="prefetch" href="/Blog/assets/js/5.ccae88aa.js"><link rel="prefetch" href="/Blog/assets/js/6.a408916c.js"><link rel="prefetch" href="/Blog/assets/js/7.72ece5e9.js"><link rel="prefetch" href="/Blog/assets/js/8.cee6db24.js"><link rel="prefetch" href="/Blog/assets/js/9.4449d28e.js">
+    <link rel="stylesheet" href="/Blog/assets/css/0.styles.c8184275.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open no-sidebar have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Blog/" class="home-link router-link-active"><img src="/Blog/img/EB-logo.png" alt="cyzzZ's blog" class="logo"> <span class="site-name can-hide">cyzzZ's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Blog/archives/" class="nav-link">Timeline</a></div><div class="nav-item"><a href="/Blog/about.html" class="nav-link">About</a></div><div class="nav-item"><a href="/Blog/categories/" class="nav-link">Categories</a></div><div class="nav-item"><a href="/Blog/tags/" class="nav-link">Tags</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="./img/avatar2.jpg"> <div class="blogger-info"><h3>cyzzZ</h3> <span>zzZ!</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/Blog/archives/" class="nav-link">Timeline</a></div><div class="nav-item"><a href="/Blog/about.html" class="nav-link">About</a></div><div class="nav-item"><a href="/Blog/categories/" class="nav-link">Categories</a></div><div class="nav-item"><a href="/Blog/tags/" class="nav-link">Tags</a></div> <!----></nav>  <!----> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-0c557b5e><div class="articleInfo" data-v-0c557b5e><ul class="breadcrumbs" data-v-0c557b5e><li data-v-0c557b5e><a href="/Blog/" title="首页" class="iconfont icon-home router-link-active" data-v-0c557b5e></a></li> <li data-v-0c557b5e><a href="/Blog/categories/?category=notes" title="分类" data-v-0c557b5e>notes</a></li><li data-v-0c557b5e><a href="/Blog/categories/?category=Tips" title="分类" data-v-0c557b5e>Tips</a></li></ul> <div class="info" data-v-0c557b5e><div title="作者" class="author iconfont icon-touxiang" data-v-0c557b5e><a href="https://github.com/cyzzZ11" target="_blank" title="作者" class="beLink" data-v-0c557b5e>cyzzZ</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-0c557b5e><a href="javascript:;" data-v-0c557b5e>2021-09-07</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">防抖与节流<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h2 id="防抖和节流的实现与实际应用场景"><a href="#防抖和节流的实现与实际应用场景" class="header-anchor">#</a> 防抖和节流的实现与实际应用场景</h2> <p>防抖实际运用场景：input输入框 onChange的时候触发查询接口调用debounce是每次触发时清除上一次的callback，直到最后一次输入完成之后，间隔指定时间后再去调用callback。 例如用户在input框中不断的输入文字，只有在用户停止输入后一段时间才会去调用查询接口；防抖就是防止用户短时间内连续多次触发事件， 可以用定时器控制一定的时间内不能再触发，如果再触发就return出去，等时间到了后再关闭定时器，用户就能再次触发该事件；</p> <p>节流运用场景：页面滚动onScroll时需要做一些操作的时候。区别于防抖的点在于 防抖可能只会触发一次，而节流在连续的过程中每间隔 指定的时间 就会触发一次； 节流是解决一个需要频繁触发的事件，但防止事件触发太多次，所以我们用定时器设置每当用户触发了这个事件后重新计时</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 防抖
+function debounce(fn,wait){
+    let timer=null
+    return function(){
+        let args=arguments
+        clearTimeout(timer)
+        timer=setTimeout(()=&gt;{
+            fn.apply(this,args)
+        },wait)
+    }
+}
+function f1(){
+    console.log('111')
+}
+var db=debounce(f1,500)
+
+// 节流
+function throttle(fn,wait){
+    let timer=null
+    return function(){
+        let args=arguments
+        if(!timer){
+            timer=setTimeout(()=&gt;{
+                timer=null
+                fn.apply(this,args)
+            },wait)
+        }      
+    }
+}
+
+function f2(){
+    console.log('222')
+}
+var db=throttle(f2,500)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div></div></div> <!----> <div class="page-edit"><!----> <div class="tags"><a href="/Blog/tags/?tag=%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" title="标签">#性能优化</a></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">1/6/2022, 12:29:56 PM</span></div></div> <div class="page-nav-wapper"><!----> <!----></div></div> <!----></main></div> <div class="footer"><div class="icons"><a href="mailto:541129392@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/cyzzZ11" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2020-2022
+    <span>cyzzZ | <a href="https://github.com/cyzzZ11" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/Blog/assets/js/app.8022dd47.js" defer></script><script src="/Blog/assets/js/2.6d4cd39a.js" defer></script><script src="/Blog/assets/js/21.3eb4d93e.js" defer></script>
+  </body>
+</html>
